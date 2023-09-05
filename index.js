@@ -2,57 +2,32 @@
 import fs from 'fs';
 import inquirer from 'inquirer';
 
-//Purpose: To ask the user questions and accept inputs to generate a README.md file using the information they provide
+//Purpose: To ask the user questions and accept inputs to generate a logo.svg file using the information they provide
 //Parameters: Inputs from the user
-//Returns: README.md file (technically accomplished the fs.writeFile at the bottom, but the whole process starts here)
+//Returns: logo.svg
 inquirer
   .prompt([
     /* Pass your questions in here */
     {
         type: 'input',
-        message: 'Title of your project:',
-        name: 'title',
+        message: 'Characters for logo (up to three characters):',
+        name: 'text',
       },
       {
         type: 'input',
-        message: 'Brief description of your project:',
-        name: 'description',
-      },
-      {
-        type: 'input',
-        message: 'Brief description on how to install your project:',
-        name: 'install',
-      },
-      {
-        type: 'input',
-        message: 'Brief description on how to use your project:',
-        name: 'usage',
-      },
-      {
-        type: 'input',
-        message: 'Describe how others can contribute to your project:',
-        name: 'contribute',
-      },
-      {
-        type: 'input',
-        message: 'Describe some simple instructions for testing:',
-        name: 'test',
+        message: 'Text color (keyword or hexadecimal format):',
+        name: 'textColor',
       },
       {
         type: 'list',
-        message: 'Select the license used for your project:',
-        choices: [new inquirer.Separator(), "MIT", "GNU GPLv3", "Apache"],
-        name: 'license',
+        message: 'Select the desired shape for the logo:',
+        choices: [new inquirer.Separator(), "Circle", "Square", "Triangle"],
+        name: 'shape',
       },
       {
         type: 'input',
-        message: 'GitHub name:',
-        name: 'github',
-      },
-      {
-        type: 'input',
-        message: 'Email best suited for people to reach you at:',
-        name: 'email',
+        message: 'Shape color (keyword or hexadecimal format):',
+        name: 'shapeColor',
       },
   ])
   .then((answers) => {
