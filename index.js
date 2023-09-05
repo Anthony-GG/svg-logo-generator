@@ -32,18 +32,10 @@ inquirer
   ])
   .then((answers) => {
     // Initilizes variables corresponding to each of the input responses for readability sake
-    var title = answers.title;
-    var description = answers.description;
-    var install = answers.install;
-    var usage = answers.usage;
-    var contribute = answers.contribute;
-    var test = answers.test;
-
-    var license = answers.license;
-    var licenseBadge = "";
-
-    var github = answers.github;
-    var email = answers.email;
+    var text = answers.text;
+    var textColor = answers.textColor;
+    var shape = answers.shape;
+    var shapeColor = answers.shapeColor;
 
     //a switch statement that determines which license was selected and adds a corresponding to badge link to the variable licenseBadge
     switch(license){
