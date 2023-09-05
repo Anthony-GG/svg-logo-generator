@@ -1,0 +1,23 @@
+{
+  "name": "svg-logo-generator",
+  "version": "1.0.0",
+  "description": "A program to generate logos for companies in an SVG format",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anthony-GG/svg-logo-generator.git"
+  },
+  "author": "Anthony Iacano",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Anthony-GG/svg-logo-generator/issues"
+  },
+  "homepage": "https://github.com/Anthony-GG/svg-logo-generator#readme",
+  "dependencies": {
+    "inquirer": "^9.2.10"
+  }
+}
