@@ -21,7 +21,7 @@ inquirer
       {
         type: 'list',
         message: 'Select the desired shape for the logo:',
-        choices: [new inquirer.Separator(), "Circle", "Square", "Triangle"],
+        choices: [new inquirer.Separator(), "Circle", "Triangle", "Square"],
         name: 'shape',
       },
       {
@@ -37,26 +37,34 @@ inquirer
     var shape = answers.shape;
     var shapeColor = answers.shapeColor;
 
-    //a switch statement that determines which shape was selected and adjusts it for the svg text
+    // a switch statement that determines which shape was selected and adjusts it for the svg text
     switch(shape){
     case "Circle":
-        shapeChoice = "circle"
+        var shapeChoice = "circle cx='0' cy='0' r='40'"
         break;
     case "Triangle":
-        shapeChoice = "triangle"
+        var shapeChoice = "polygon x='50%' y='50%' points='50 15, 100 100, 0 100'"
         break;
-    case "Rectangle":
-        shapeChoice = "rect"
+    case "Square":
+        var shapeChoice = "rect x='50%' y='50%'"
         break;
     }
 
 
 //Content of the svg file with variables added in throughout
 var svgContent = `
-  <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
-  <rect x="50" y="50" width="100" height="100" fill="blue" />
+  <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" style="background-color:black">
+  <${shapeChoice} width='300' height='200' fill="blue" />
+  <text x='50%' y='50' dominant-baseline="middle" text-anchor="middle" fill='red'>hi</text>
   </svg>
 `;
+
+var svgDemo = `
+  <svg xmlns="http://www.w3.org/2000/svg" width="200" height="100">
+    <rect x="0" y="0" width="200" height="100" stroke="red" stroke-width="3px" fill="white"/>
+    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">TEXT</text>    
+  </svg>
+`
 
 //Function that actually writes the information to a file
     fs.writeFile('./logo.svg', svgContent, err => {
