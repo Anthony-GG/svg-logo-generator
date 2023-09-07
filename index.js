@@ -37,68 +37,29 @@ inquirer
     var shape = answers.shape;
     var shapeColor = answers.shapeColor;
 
-    //a switch statement that determines which license was selected and adds a corresponding to badge link to the variable licenseBadge
-    switch(license){
-    case "MIT":
-        licenseBadge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+    //a switch statement that determines which shape was selected and adjusts it for the svg text
+    switch(shape){
+    case "Circle":
+        shapeChoice = "circle"
         break;
-    case "GNU GPLv3":
-        licenseBadge = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+    case "Triangle":
+        shapeChoice = "triangle"
         break;
-    case "Apache":
-        licenseBadge = "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+    case "Rectangle":
+        shapeChoice = "rect"
         break;
     }
 
 
-//Content of the readme file with variables added in throughout
-var readmeContent = `
-# ${title}
-
-${licenseBadge}
-    
-## Description
-    
-${description}
-
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contrubuting](#contributing)
-- [Testing](#testing)
-- [License](#license)
-- [Contact Me](#questions)
-
-## Installation
-
-${install}
-
-## Usage
-
-${usage}
-
-## Contributing
-
-${contribute}
-
-## Testing
-
-${test}
-
-## License
-
-The license used in this project was the ${license} license! Please reference the LICENSE file inside of the repository.
-
-## Questions?
-
-You can find me here on GitHub at https://www.github.com/${github} <br><br>
-Otherwise, feel free to reach me at ${email}
----
+//Content of the svg file with variables added in throughout
+var svgContent = `
+  <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+  <rect x="50" y="50" width="100" height="100" fill="blue" />
+  </svg>
 `;
 
 //Function that actually writes the information to a file
-    fs.writeFile('./README.md', readmeContent, err => {
+    fs.writeFile('./logo.svg', svgContent, err => {
         if (err) {
         console.error(err);
         }
