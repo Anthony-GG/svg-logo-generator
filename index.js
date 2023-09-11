@@ -41,12 +41,15 @@ inquirer
     switch(shape){
     case "Circle":
         var shapeChoice = "circle cx='50px' cy='50px' r='40' width='100%' height='100%'"
+        var textHeight = "50px";
         break;
     case "Triangle":
         var shapeChoice = "polygon x='50px' y='50px' points='50 15, 100 100, 0 100' width='100%' height='100%'"
+        var textHeight = "65px";
         break;
     case "Square":
         var shapeChoice = "rect width='180' height='180' x='50px' y='50px'"
+        var textHeight = "50px";
         break;
     }
 
@@ -55,16 +58,9 @@ inquirer
 var svgContent = `
   <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
   <${shapeChoice} fill="${shapeColor}" />
-  <text x="50px" y="50px" text-anchor="middle" dy="0.3em" fill="${textColor}">${text}</text>
+  <text x="50px" y="${textHeight}" text-anchor="middle" dy="0.3em" style="font-size: 25px" fill="${textColor}">${text}</text>
   </svg>
 `;
-
-var svgDemo = `
-  <svg xmlns="http://www.w3.org/2000/svg" width="200" height="100">
-    <rect x="0" y="0" width="200" height="100" stroke="red" stroke-width="3px" fill="white"/>
-    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">TEXT</text>    
-  </svg>
-`
 
 //Function that actually writes the information to a file
     fs.writeFile('./logo.svg', svgContent, err => {
