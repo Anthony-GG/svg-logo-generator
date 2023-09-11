@@ -1,5 +1,5 @@
 
   <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-  <circle cx='150px' cy='100px' r='75' width='100%' height='100%' fill="black" />
-  <text x="150px" y="100px" text-anchor="middle" dy="0.3em" style="font-size: 75px" fill="#fef65b">CIR</text>
+  <polygon x='50px' y='50px' points='150,10 275,180 25,180' width='100%' height='100%' fill="black" />
+  <text x="150px" y="125px" text-anchor="middle" dy="0.3em" style="font-size: 75px" fill="#fef65b">FUC</text>
   </svg>

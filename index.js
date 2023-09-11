@@ -44,7 +44,7 @@ inquirer
         var textHeight = "100px";
         break;
     case "Triangle":
-        var shapeChoice = "polygon x='50px' y='50px' points='150,10 275,180 25,180' width='100%' height='100%'"
+        var shapeChoice = "polygon x='50px' y='50px' points='150, 18 244, 182 56, 182' width='100%' height='100%'"
         var textHeight = "125px";
         break;
     case "Square":
