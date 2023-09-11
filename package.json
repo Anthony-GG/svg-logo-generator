@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "A program to generate logos for companies in an SVG format",
   "main": "index.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,10 @@
   "dependencies": {
     "inquirer": "^9.2.10",
     "jest": "^29.6.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.17",
+    "@babel/preset-env": "^7.22.15",
+    "babel-jest": "^29.6.4"
   }
 }
