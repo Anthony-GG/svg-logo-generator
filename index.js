@@ -62,7 +62,7 @@ inquirer
     }
 
 
-//Content of the svg file with variables added in throughout
+//Content of the svg file with object rendered in and variables added to adjust the text
 var svgContent = `
   <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
   ${shapeObj.render()}
