@@ -44,12 +44,12 @@ inquirer
         var textHeight = "100px";
         break;
     case "Triangle":
-        var shapeChoice = "polygon x='50px' y='50px' points='50 15, 100 100, 0 100' width='100%' height='100%'"
-        var textHeight = "70px";
+        var shapeChoice = "polygon x='50px' y='50px' points='150,10 275,180 25,180' width='100%' height='100%'"
+        var textHeight = "125px";
         break;
     case "Square":
-        var shapeChoice = "rect width='180' height='180' x='50px' y='50px'"
-        var textHeight = "50px";
+        var shapeChoice = "rect width='150' height='150' x='75px' y='25px'"
+        var textHeight = "100px";
         break;
     }
 
@@ -57,7 +57,6 @@ inquirer
 //Content of the svg file with variables added in throughout
 var svgContent = `
   <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect width="100%" height="100%" fill="red" />
   <${shapeChoice} fill="${shapeColor}" />
   <text x="150px" y="${textHeight}" text-anchor="middle" dy="0.3em" style="font-size: 75px" fill="${textColor}">${text}</text>
   </svg>
