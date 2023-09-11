@@ -1,5 +1,5 @@
 
   <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-  <polygon x='50px' y='50px' points='150,10 275,180 25,180' width='100%' height='100%' fill="black" />
-  <text x="150px" y="125px" text-anchor="middle" dy="0.3em" style="font-size: 75px" fill="#fef65b">FUC</text>
+  <polygon x='50px' y='50px' points='150, 18 244, 182 56, 182' width='100%' height='100%' fill="black" />
+  <text x="150px" y="125px" text-anchor="middle" dy="0.3em" style="font-size: 50px" fill="#fef65b">BLA</text>
   </svg>

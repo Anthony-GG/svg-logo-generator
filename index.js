@@ -58,7 +58,7 @@ inquirer
 var svgContent = `
   <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
   <${shapeChoice} fill="${shapeColor}" />
-  <text x="150px" y="${textHeight}" text-anchor="middle" dy="0.3em" style="font-size: 75px" fill="${textColor}">${text}</text>
+  <text x="150px" y="${textHeight}" text-anchor="middle" dy="0.3em" style="font-size: 50px" fill="${textColor}">${text}</text>
   </svg>
 `;
 
