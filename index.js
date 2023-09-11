@@ -1,10 +1,11 @@
 //Imports required packages
-// import fs from 'fs';
-// import inquirer from 'inquirer';
-
-//Imports required packages
 const inquirer = require('inquirer')
 const fs = require('fs')
+
+//Imports required classes
+const Circle = require('./lib/circle.js');
+const Square = require('./lib/square.js');
+const Triangle = require('./lib/triangle'); 
 
 //Purpose: To ask the user questions and accept inputs to generate a logo.svg file using the information they provide
 //Parameters: Inputs from the user
@@ -44,15 +45,18 @@ inquirer
     // a switch statement that determines which shape was selected and adjusts it for the svg text
     switch(shape){
     case "Circle":
-        var shapeObj = "circle cx='150px' cy='100px' r='75'"
+        var shapeObj = new Circle()
+        shapeObj.setColor(shapeColor);
         var textHeight = "100px";
         break;
     case "Triangle":
-        var shapeObj = "polygon x='50px' y='50px' points='150, 18 244, 182 56, 182'"
+        var shapeObj = new Triangle()
+        shapeObj.setColor(shapeColor);
         var textHeight = "125px";
         break;
     case "Square":
-        var shapeObj = "rect width='150' height='150' x='75px' y='25px'"
+        var shapeObj = new Square()
+        shapeObj.setColor(shapeColor);
         var textHeight = "100px";
         break;
     }
@@ -61,7 +65,7 @@ inquirer
 //Content of the svg file with variables added in throughout
 var svgContent = `
   <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-  ${shapeObj}
+  ${shapeObj.render()}
   <text x="150px" y="${textHeight}" text-anchor="middle" dy="0.3em" style="font-size: 50px" fill="${textColor}">${text}</text>
   </svg>
 `;
