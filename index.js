@@ -1,6 +1,10 @@
 //Imports required packages
-import fs from 'fs';
-import inquirer from 'inquirer';
+// import fs from 'fs';
+// import inquirer from 'inquirer';
+
+//Imports required packages
+const inquirer = require('inquirer')
+const fs = require('fs')
 
 //Purpose: To ask the user questions and accept inputs to generate a logo.svg file using the information they provide
 //Parameters: Inputs from the user
