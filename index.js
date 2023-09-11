@@ -40,12 +40,12 @@ inquirer
     // a switch statement that determines which shape was selected and adjusts it for the svg text
     switch(shape){
     case "Circle":
-        var shapeChoice = "circle cx='50px' cy='50px' r='40' width='100%' height='100%'"
-        var textHeight = "50px";
+        var shapeChoice = "circle cx='150px' cy='100px' r='75' width='100%' height='100%'"
+        var textHeight = "100px";
         break;
     case "Triangle":
         var shapeChoice = "polygon x='50px' y='50px' points='50 15, 100 100, 0 100' width='100%' height='100%'"
-        var textHeight = "65px";
+        var textHeight = "70px";
         break;
     case "Square":
         var shapeChoice = "rect width='180' height='180' x='50px' y='50px'"
@@ -57,8 +57,9 @@ inquirer
 //Content of the svg file with variables added in throughout
 var svgContent = `
   <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="red" />
   <${shapeChoice} fill="${shapeColor}" />
-  <text x="50px" y="${textHeight}" text-anchor="middle" dy="0.3em" style="font-size: 25px" fill="${textColor}">${text}</text>
+  <text x="150px" y="${textHeight}" text-anchor="middle" dy="0.3em" style="font-size: 75px" fill="${textColor}">${text}</text>
   </svg>
 `;
 
@@ -77,3 +78,4 @@ var svgContent = `
       // Something else went wrong
     }
   });
+
