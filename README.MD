@@ -29,7 +29,7 @@ After doing the procedure done during installation, just run 'node index.js' in 
 ## Video
 
 ### Here is a link to the video example showcasing the installation and usage of this project:
-[![Watch the video](https://img.youtube.com/vi/BBKlHoSKU28/maxresdefault.jpg)](https://www.youtube.com/watch?v=BBKlHoSKU28&t=3s)
+[![Watch the video](https://img.youtube.com/vi/yvu42m7srhQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=yvu42m7srhQ)
 
 ## Example outputs from program
 <div style="text-align:center">
