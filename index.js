@@ -1,6 +1,10 @@
 //Imports required packages
 const inquirer = require('inquirer')
+const MaxLengthInputPrompt = require('inquirer-maxlength-input-prompt')
 const fs = require('fs')
+
+//Adds the max length requirement to inquirer prompts
+inquirer.registerPrompt('maxlength-input', MaxLengthInputPrompt)
 
 //Imports required classes
 const Circle = require('./lib/circle.js');
@@ -14,9 +18,10 @@ inquirer
   .prompt([
     /* Pass your questions in here */
     {
-        type: 'input',
+        type: 'maxlength-input',
         message: 'Characters for logo (up to three characters):',
         name: 'text',
+        maxLength: 3,
       },
       {
         type: 'input',

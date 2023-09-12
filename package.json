@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Anthony-GG/svg-logo-generator#readme",
   "dependencies": {
     "inquirer": "^8.2.6",
+    "inquirer-maxlength-input-prompt": "^1.0.2",
     "jest": "^29.6.4"
   }
 }
