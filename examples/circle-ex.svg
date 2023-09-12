@@ -1,0 +1,5 @@
+
+  <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx='150px' cy='100px' r='75' fill='blue' />
+  <text x="150px" y="100px" text-anchor="middle" dy="0.3em" style="font-size: 50px" fill="#fef65b">HEY</text>
+  </svg>

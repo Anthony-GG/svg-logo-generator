@@ -1,0 +1,5 @@
+
+  <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="150, 18 244, 182 56, 182" fill="black" />
+  <text x="150px" y="125px" text-anchor="middle" dy="0.3em" style="font-size: 50px" fill="purple">LOL</text>
+  </svg>
